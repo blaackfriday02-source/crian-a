@@ -255,7 +255,7 @@ function trocar_imagens_por_cor(cor){
                 try{ if(window.jQuery && jQuery.fn && jQuery.fn.owlCarousel){ jQuery('#imagens-do-produto').trigger('destroy.owl.carousel'); } }catch(e){}
 
                 container.innerHTML = imgs.map(function(src, idx){
-                    return "<div class='item'><img src='"+src+"' "+(idx===0?"loading='eager' fetchpriority='high'":"loading='lazy'")+" decoding='async' style='width:100%;display:block;object-fit:cover;'></div>";
+                    return "<div class='item'><img src='"+src+"' "+(idx===0?"loading='eager' fetchpriority='high'":"loading='lazy'")+" decoding='async' style='width:100%;display:block;'></div>";
                 }).join('');
 
                 // re-init owl (se disponível)

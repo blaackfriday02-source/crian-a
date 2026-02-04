@@ -156,7 +156,7 @@ window.addEventListener("load", function () {
         <img src="${src}"
           ${i === 0 ? 'loading="eager" fetchpriority="high"' : 'loading="lazy"'}
           decoding="async"
-          style="width:100%;display:block;object-fit:cover;">
+          style="width:100%;display:block;">
       </div>
     `; }).join("");
   }
