@@ -311,7 +311,7 @@ try{
       .slice(0, 3)
       .map((src) => `
         <div style="width:82px;height:82px;border-radius:12px;overflow:hidden;background:#f2f2f2;flex:0 0 82px;">
-          <img src="${src}" alt="" style="width:100%;height:100%;object-fit:cover;display:block;" />
+          <img src="${src}" alt="" style="width:100%;height:100%;display:block;" />
         </div>
       `)
       .join("");

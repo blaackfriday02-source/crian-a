@@ -255,6 +255,8 @@ function trocar_imagens_por_cor(cor){
                 try{ if(window.jQuery && jQuery.fn && jQuery.fn.owlCarousel){ jQuery('#imagens-do-produto').trigger('destroy.owl.carousel'); } }catch(e){}
 
                 container.innerHTML = imgs.map(function(src, idx){
+                    // IMPORTANT: do not force object-fit inline. The fit mode is controlled via CSS
+                    // (desktop can crop, mobile should fit/contain without cutting).
                     return "<div class='item'><img src='"+src+"' "+(idx===0?"loading='eager' fetchpriority='high'":"loading='lazy'")+" decoding='async' style='width:100%;display:block;'></div>";
                 }).join('');
 
@@ -342,7 +344,8 @@ function carregar_avaliações(){
     for(let i of JSON.parse(get_cookie('produto_avaliações'))){
         let imagens = [];
         for(let i2 of JSON.parse(i.imagens_e_videos)){
-            imagens.push(`<${i2.tag} src='${i2.valor}' style='margin:0 10px 0 0;width:72px;height:72px;object-fit:cover;object-position:center;border-radius:4px;'>`);
+            // Do not force object-fit inline; CSS handles desktop/mobile fit.
+            imagens.push(`<${i2.tag} src='${i2.valor}' style='margin:0 10px 0 0;width:72px;height:72px;object-position:center;border-radius:4px;'>`);
         }
         imagens = imagens.join('');
         
