@@ -1,0 +1,16 @@
+@font-face{
+	font-family: proximanovalight;
+	src: url("../../api/fontes/proximanova-light.woff2");
+}
+@font-face{
+	font-family: proximanovaregular;
+	src: url("../../api/fontes/proximanova-regular.woff2");
+}
+@font-face{
+	font-family: proximanovasemibold;
+	src: url("../../api/fontes/proximanova-semibold.woff2");
+}
+@font-face{
+	font-family: icones;
+	src: url("../../api/fontes/navigation.woff2");
+}
