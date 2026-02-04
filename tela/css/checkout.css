@@ -1061,3 +1061,12 @@ body[data-page="pagamento"]{ padding-bottom: 92px !important; }
 .ci-variant{ line-height: 14px; }
 .ci-variant + .ci-variant{ margin-top: -6px; }
 
+
+
+/* Mobile: imagem do produto encaixada (sem cortar) */
+@media (max-width: 768px) {
+  .ci-img{
+    object-fit: contain !important;
+    background: #fff;
+  }
+}
